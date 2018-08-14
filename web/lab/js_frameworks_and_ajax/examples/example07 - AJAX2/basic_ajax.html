@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Story Book</title>
+    <style type="text/css">
+
+        #article_container {
+            background-color: gray;
+            width: 900px;
+            margin: auto;
+            padding: 50px;
+        }
+
+        .article {
+            border-radius: 20px;
+            background-color: lightskyblue;
+            padding: 25px;
+            margin: 25px 0px 25px 0px;
+        }
+
+    </style>
+    <script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $.ajax({
+                url: 'https://sporadic.nz/ajax/articles',
+                type: 'GET',
+                data: {id: 1},
+                success: function (article) {
+
+                    var article_title = $('<h3>').text(article.title);
+                    var article_body = $('<p>').text(article.content);
+
+                    $('body').append(article_title);
+                    $('body').append(article_body);
+                }
+            });
+            
+        });
+
+    </script>
+</head>
+<body>
+    <h1>Articles</h1>
+</body>
+</html>

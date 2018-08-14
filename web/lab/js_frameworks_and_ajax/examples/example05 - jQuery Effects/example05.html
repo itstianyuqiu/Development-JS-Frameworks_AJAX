@@ -1,0 +1,199 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Example 5 - jQuery Effects</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <style>
+        body {
+            margin-top: 20px;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="card">
+                <h5 class="card-header">Disappearing paragraphs!</h5>
+
+                <div id="disappearingPContainer" class="card-body">
+
+                    <h5 class="card-title">Click any paragraph here to make it disappear!</h5>
+
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus
+                        risus a nunc
+                        rutrum,
+                        vel
+                        faucibus sapien tincidunt. Aliquam sed aliquet nibh, fermentum volutpat nunc. Duis tincidunt non
+                        risus at tempor. Curabitur cursus velit lacus, in pellentesque magna vehicula ut. Ut
+                        sollicitudin
+                        congue mollis. Vestibulum eu nisi malesuada ante semper gravida et eu nisl. Aenean hendrerit
+                        gravida
+                        nulla ut vehicula. Ut nec tempus metus. Cras id justo vitae quam pellentesque porttitor.</p>
+
+                    <p class="card-text">Cras quis condimentum ligula. Pellentesque laoreet leo vitae tellus dapibus,
+                        quis iaculis diam
+                        pharetra.
+                        Maecenas ultricies, enim sed molestie aliquam, ante felis rhoncus augue, vitae maximus leo quam
+                        id
+                        velit. Integer vulputate laoreet sodales. In posuere velit at purus aliquam pretium. Duis
+                        egestas
+                        semper tortor, in vulputate arcu tempus varius. Duis tincidunt, est a ornare interdum, odio
+                        sapien
+                        dignissim eros, quis ullamcorper ipsum justo eget mauris. In viverra maximus velit, feugiat
+                        facilisis
+                        elit egestas in. In quis suscipit libero, vel aliquam nunc. Praesent tempor efficitur velit id
+                        tristique.
+                        Praesent consequat massa a sapien interdum, ut mollis justo finibus. Sed lacinia velit eu mattis
+                        hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus.
+                        Praesent laoreet pharetra quam, a efficitur odio varius vitae.</p>
+
+                    <p class="card-text">Nulla sagittis tristique ante quis pulvinar. Nunc sagittis massa tincidunt urna
+                        congue euismod.
+                        Sed a
+                        ex eget tellus gravida malesuada vel at est. Quisque quis ullamcorper elit. Fusce diam risus,
+                        rutrum
+                        vel risus in, euismod eleifend purus. Class aptent taciti sociosqu ad litora torquent per
+                        conubia
+                        nostra, per inceptos himenaeos. Morbi pretium arcu mattis, consequat sapien at, condimentum leo.
+                        Sed porta augue augue, ac ornare ipsum scelerisque et. Sed mauris elit, fermentum vel metus
+                        auctor,
+                        posuere placerat sapien. Maecenas non volutpat risus. Donec at ex quis orci commodo pellentesque
+                        nec elementum orci. Praesent nibh dolor, tincidunt vel tincidunt ut, bibendum id lectus.
+                        Suspendisse
+                        potenti.
+                    </p>
+
+                    <button class="btn btn-primary" id="btnShowPs">Show all paragraphs again.</button>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="card">
+                <h5 class="card-header">Fading paragraphs!</h5>
+
+                <div id="fadingPContainer" class="card-body">
+
+                    <h5 class="card-title">Click any paragraph here to make it fade out!</h5>
+
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus
+                        risus a nunc
+                        rutrum,
+                        vel
+                        faucibus sapien tincidunt. Aliquam sed aliquet nibh, fermentum volutpat nunc. Duis tincidunt non
+                        risus at tempor. Curabitur cursus velit lacus, in pellentesque magna vehicula ut. Ut
+                        sollicitudin
+                        congue mollis. Vestibulum eu nisi malesuada ante semper gravida et eu nisl. Aenean hendrerit
+                        gravida
+                        nulla ut vehicula. Ut nec tempus metus. Cras id justo vitae quam pellentesque porttitor.</p>
+
+                    <p class="card-text">Cras quis condimentum ligula. Pellentesque laoreet leo vitae tellus dapibus,
+                        quis iaculis diam
+                        pharetra.
+                        Maecenas ultricies, enim sed molestie aliquam, ante felis rhoncus augue, vitae maximus leo quam
+                        id
+                        velit. Integer vulputate laoreet sodales. In posuere velit at purus aliquam pretium. Duis
+                        egestas
+                        semper tortor, in vulputate arcu tempus varius. Duis tincidunt, est a ornare interdum, odio
+                        sapien
+                        dignissim eros, quis ullamcorper ipsum justo eget mauris. In viverra maximus velit, feugiat
+                        facilisis
+                        elit egestas in. In quis suscipit libero, vel aliquam nunc. Praesent tempor efficitur velit id
+                        tristique.
+                        Praesent consequat massa a sapien interdum, ut mollis justo finibus. Sed lacinia velit eu mattis
+                        hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus.
+                        Praesent laoreet pharetra quam, a efficitur odio varius vitae.</p>
+
+                    <p class="card-text">Nulla sagittis tristique ante quis pulvinar. Nunc sagittis massa tincidunt urna
+                        congue euismod.
+                        Sed a
+                        ex eget tellus gravida malesuada vel at est. Quisque quis ullamcorper elit. Fusce diam risus,
+                        rutrum
+                        vel risus in, euismod eleifend purus. Class aptent taciti sociosqu ad litora torquent per
+                        conubia
+                        nostra, per inceptos himenaeos. Morbi pretium arcu mattis, consequat sapien at, condimentum leo.
+                        Sed porta augue augue, ac ornare ipsum scelerisque et. Sed mauris elit, fermentum vel metus
+                        auctor,
+                        posuere placerat sapien. Maecenas non volutpat risus. Donec at ex quis orci commodo pellentesque
+                        nec elementum orci. Praesent nibh dolor, tincidunt vel tincidunt ut, bibendum id lectus.
+                        Suspendisse
+                        potenti.
+                    </p>
+
+                    <button class="btn btn-primary" id="btnUnfadePs">Fade-in all paragraphs again.</button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <div class="card">
+                <h5 class="card-header">Animation!</h5>
+
+                <div id="animationContainer" class="card-body">
+
+                    <h5 class="card-title">Use the buttons to control the animation.</h5>
+                    <button class="btn btn-success" id="btnStartAnimation">Animate!</button>
+                    <button class="btn btn-danger" id="btnStopAnimation" disabled>Stop!</button>
+
+                    <div id="box"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Bootstrap & jQuery JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!-- jQuery color animations plugin (see comment in example05.js) -->
+<script src="jquery.animate-colors-min.js"></script>
+
+<!-- Your JavaScript -->
+<script src="example05.js"></script>
+</body>
+
+</html>
